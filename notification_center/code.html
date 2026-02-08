@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Notification Center</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#0f6df0",
+                "background-light": "#f5f7f8",
+                "background-dark": "#101822",
+              },
+              fontFamily: {
+                "display": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex h-screen w-full flex-col overflow-x-hidden">
+<!-- TopAppBar -->
+<div class="sticky top-0 z-10 flex items-center bg-white/80 dark:bg-background-dark/80 backdrop-blur-md p-4 pb-2 justify-between border-b border-slate-200 dark:border-slate-800">
+<h2 class="text-[#0d131c] dark:text-white text-2xl font-bold leading-tight tracking-[-0.015em] flex-1">Notifications</h2>
+<div class="flex items-center justify-end">
+<button class="text-primary text-sm font-semibold leading-normal tracking-[0.015em] shrink-0">Mark all as read</button>
+</div>
+</div>
+<!-- SegmentedButtons (Filter) -->
+<div class="px-4 py-3 bg-white dark:bg-background-dark">
+<div class="flex h-10 w-full items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-slate-700 has-[:checked]:shadow-sm has-[:checked]:text-primary text-slate-500 dark:text-slate-400 text-xs font-semibold uppercase tracking-wider transition-all">
+<span class="truncate">All</span>
+<input checked="" class="invisible w-0" name="filter" type="radio" value="All"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-slate-700 has-[:checked]:shadow-sm has-[:checked]:text-primary text-slate-500 dark:text-slate-400 text-xs font-semibold uppercase tracking-wider transition-all">
+<span class="truncate">Bookings</span>
+<input class="invisible w-0" name="filter" type="radio" value="Bookings"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-slate-700 has-[:checked]:shadow-sm has-[:checked]:text-primary text-slate-500 dark:text-slate-400 text-xs font-semibold uppercase tracking-wider transition-all">
+<span class="truncate">Messages</span>
+<input class="invisible w-0" name="filter" type="radio" value="Messages"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-slate-700 has-[:checked]:shadow-sm has-[:checked]:text-primary text-slate-500 dark:text-slate-400 text-xs font-semibold uppercase tracking-wider transition-all">
+<span class="truncate">Payments</span>
+<input class="invisible w-0" name="filter" type="radio" value="Payments"/>
+</label>
+</div>
+</div>
+<!-- Notification List -->
+<div class="flex-1 overflow-y-auto">
+<!-- SectionHeader: Today -->
+<h3 class="text-[#0d131c] dark:text-slate-300 text-sm font-bold uppercase tracking-widest px-4 pb-2 pt-6">Today</h3>
+<!-- ListItem: Booking (Unread) -->
+<div class="flex items-center gap-4 bg-white dark:bg-slate-900/50 px-4 min-h-[88px] py-3 justify-between border-b border-slate-50 dark:border-slate-800 relative">
+<div class="absolute left-1 top-1/2 -translate-y-1/2 w-1.5 h-1.5 bg-primary rounded-full"></div>
+<div class="flex items-start gap-4">
+<div class="text-primary flex items-center justify-center rounded-xl bg-primary/10 dark:bg-primary/20 shrink-0 size-12">
+<span class="material-symbols-outlined">directions_car</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-[#0d131c] dark:text-white text-base font-semibold leading-snug line-clamp-1">Driver en route</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-snug line-clamp-2 mt-0.5">Michael is 5 minutes away for your airport transfer booking.</p>
+</div>
+</div>
+<div class="shrink-0 self-start mt-1">
+<p class="text-slate-400 text-xs font-medium">2m ago</p>
+</div>
+</div>
+<!-- ListItem: Message -->
+<div class="flex items-center gap-4 bg-white dark:bg-slate-900/50 px-4 min-h-[88px] py-3 justify-between border-b border-slate-50 dark:border-slate-800">
+<div class="flex items-start gap-4">
+<div class="text-[#0d131c] dark:text-slate-300 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 shrink-0 size-12">
+<span class="material-symbols-outlined">chat_bubble</span>
+</div>
+<div class="flex flex-col justify-center">
+<div class="flex items-center gap-2">
+<p class="text-[#0d131c] dark:text-white text-base font-semibold leading-snug line-clamp-1">Message from Sarah (Nanny)</p>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-snug line-clamp-2 mt-0.5">"Hi there! I've just arrived at the front gate. Looking forward to meeting you."</p>
+</div>
+</div>
+<div class="shrink-0 self-start mt-1">
+<p class="text-slate-400 text-xs font-medium">45m ago</p>
+</div>
+</div>
+<!-- ListItem: Payment -->
+<div class="flex items-center gap-4 bg-white dark:bg-slate-900/50 px-4 min-h-[88px] py-3 justify-between border-b border-slate-50 dark:border-slate-800">
+<div class="flex items-start gap-4">
+<div class="text-emerald-600 dark:text-emerald-400 flex items-center justify-center rounded-xl bg-emerald-50 dark:bg-emerald-900/30 shrink-0 size-12">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-[#0d131c] dark:text-white text-base font-semibold leading-snug line-clamp-1">Payment Successful</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-snug line-clamp-2 mt-0.5">Your payment of $85.00 for the plumbing repair has been processed.</p>
+</div>
+</div>
+<div class="shrink-0 self-start mt-1">
+<p class="text-slate-400 text-xs font-medium">2h ago</p>
+</div>
+</div>
+<!-- SectionHeader: Yesterday -->
+<h3 class="text-[#0d131c] dark:text-slate-300 text-sm font-bold uppercase tracking-widest px-4 pb-2 pt-6">Yesterday</h3>
+<!-- ListItem: Booking Update -->
+<div class="flex items-center gap-4 bg-white dark:bg-slate-900/50 px-4 min-h-[88px] py-3 justify-between border-b border-slate-50 dark:border-slate-800">
+<div class="flex items-start gap-4">
+<div class="text-[#0d131c] dark:text-slate-300 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 shrink-0 size-12">
+<span class="material-symbols-outlined">event_available</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-[#0d131c] dark:text-white text-base font-semibold leading-snug line-clamp-1">Booking Confirmed</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-snug line-clamp-2 mt-0.5">James has accepted your request for house cleaning on Friday.</p>
+</div>
+</div>
+<div class="shrink-0 self-start mt-1">
+<p class="text-slate-400 text-xs font-medium">1d ago</p>
+</div>
+</div>
+<!-- ListItem: Promotion/System -->
+<div class="flex items-center gap-4 bg-white dark:bg-slate-900/50 px-4 min-h-[88px] py-3 justify-between border-b border-slate-50 dark:border-slate-800">
+<div class="flex items-start gap-4">
+<div class="text-amber-600 dark:text-amber-400 flex items-center justify-center rounded-xl bg-amber-50 dark:bg-amber-900/30 shrink-0 size-12">
+<span class="material-symbols-outlined">stars</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-[#0d131c] dark:text-white text-base font-semibold leading-snug line-clamp-1">Leave a Review</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-snug line-clamp-2 mt-0.5">How was your experience with Emma? Rate your recent booking.</p>
+</div>
+</div>
+<div class="shrink-0 self-start mt-1">
+<p class="text-slate-400 text-xs font-medium">1d ago</p>
+</div>
+</div>
+<!-- Bottom Spacer -->
+<div class="h-20"></div>
+</div>
+<!-- Navigation Bar (iOS Placeholder style) -->
+<div class="fixed bottom-0 w-full bg-white/90 dark:bg-background-dark/90 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800 flex justify-around items-center py-2 px-6">
+<div class="flex flex-col items-center text-slate-400">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium mt-1">Home</span>
+</div>
+<div class="flex flex-col items-center text-slate-400">
+<span class="material-symbols-outlined">calendar_month</span>
+<span class="text-[10px] font-medium mt-1">Bookings</span>
+</div>
+<div class="flex flex-col items-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">notifications</span>
+<span class="text-[10px] font-medium mt-1">Alerts</span>
+</div>
+<div class="flex flex-col items-center text-slate-400">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium mt-1">Profile</span>
+</div>
+</div>
+</div>
+</body></html>

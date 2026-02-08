@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Provider Service Listing Form</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0f6df0",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .ios-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#0d131c] dark:text-slate-100 min-h-screen">
+<!-- Top Navigation Bar -->
+<div class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center p-4 justify-between max-w-md mx-auto">
+<div class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors cursor-pointer">
+<span class="material-symbols-outlined">arrow_back_ios</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10">List Your Service</h2>
+</div>
+</div>
+<div class="max-w-md mx-auto pb-32">
+<!-- Progress Bar Section -->
+<div class="flex flex-col gap-3 p-4 mt-2">
+<div class="flex gap-6 justify-between items-end">
+<p class="text-base font-semibold leading-normal">Service Information</p>
+<p class="text-sm font-medium opacity-70">Step 2 of 4</p>
+</div>
+<div class="rounded-full bg-slate-200 dark:bg-slate-800 overflow-hidden h-2">
+<div class="h-full rounded-full bg-primary transition-all duration-500" style="width: 50%;"></div>
+</div>
+</div>
+<!-- Headline & Intro -->
+<div class="px-4 pt-4">
+<h3 class="text-2xl font-bold leading-tight pb-1">Service Details</h3>
+<p class="text-sm font-normal opacity-70 leading-relaxed">Provide details about the service you offer to attract more clients in your area.</p>
+</div>
+<!-- Form Fields -->
+<div class="flex flex-col gap-6 p-4 mt-4">
+<!-- Service Title -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold">Service Title</label>
+<input class="w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 h-14 px-4 text-base focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="e.g. Professional Home Plumbing" type="text"/>
+</div>
+<!-- Category Dropdown -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold">Category</label>
+<div class="relative">
+<select class="appearance-none w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 h-14 px-4 text-base focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all cursor-pointer">
+<option disabled="" selected="" value="">Select a category</option>
+<option value="plumbing">Plumbing</option>
+<option value="childcare">Childcare / Nanny</option>
+<option value="driving">Private Driver</option>
+<option value="cleaning">House Cleaning</option>
+<option value="electrician">Electrician</option>
+</select>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
+<span class="material-symbols-outlined text-slate-400">expand_more</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<!-- Hourly Rate -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold">Hourly Rate ($)</label>
+<div class="relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">$</span>
+<input class="w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 h-14 pl-8 pr-4 text-base focus:ring-2 focus:ring-primary focus:border-transparent outline-none" placeholder="45" type="number"/>
+</div>
+</div>
+<!-- Experience -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold">Years Exp.</label>
+<input class="w-full rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 h-14 px-4 text-base focus:ring-2 focus:ring-primary focus:border-transparent outline-none" placeholder="5" type="number"/>
+</div>
+</div>
+<!-- Skills Tag Input -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold">Skills &amp; Specializations</label>
+<div class="flex flex-col gap-3 p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 min-h-[120px]">
+<div class="flex flex-wrap gap-2">
+<!-- Example Tags -->
+<div class="flex items-center gap-1 bg-primary/10 dark:bg-primary/20 text-primary px-3 py-1.5 rounded-full text-sm font-medium">
+                            Pipe Fitting
+                            <span class="material-symbols-outlined text-sm cursor-pointer">close</span>
+</div>
+<div class="flex items-center gap-1 bg-primary/10 dark:bg-primary/20 text-primary px-3 py-1.5 rounded-full text-sm font-medium">
+                            Emergency Repairs
+                            <span class="material-symbols-outlined text-sm cursor-pointer">close</span>
+</div>
+<div class="flex items-center gap-1 bg-primary/10 dark:bg-primary/20 text-primary px-3 py-1.5 rounded-full text-sm font-medium">
+                            Drainage
+                            <span class="material-symbols-outlined text-sm cursor-pointer">close</span>
+</div>
+</div>
+<input class="w-full border-none bg-transparent p-0 text-base focus:ring-0 outline-none placeholder:text-slate-400" placeholder="Add a skill (e.g. HVAC, CPR Certified)..." type="text"/>
+</div>
+<p class="text-xs text-slate-500 mt-1 px-1">Type a skill and press enter to add it.</p>
+</div>
+<!-- Optional Image Upload -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold">Portfolio Photos</label>
+<div class="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
+<div class="flex-shrink-0 w-24 h-24 rounded-xl border-2 border-dashed border-slate-300 dark:border-slate-700 flex flex-col items-center justify-center text-slate-400 hover:border-primary hover:text-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-3xl">add_a_photo</span>
+<span class="text-[10px] font-bold mt-1">UPLOAD</span>
+</div>
+<div class="relative flex-shrink-0 w-24 h-24 rounded-xl overflow-hidden group">
+<img class="w-full h-full object-cover" data-alt="A clean set of professional plumbing tools on a work mat" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCr_0UJqb5aANUZLw4gS8DHKDZSaa0x9yjorRq1XkPKhiPKA20GZ_StFYq4RamOISHM4syxBnT8qfRMtk8yCwDMjb8fODN85vH4MaAQp3-H8arYkyqyJa1er3U_ilxUljmmN_4LMILZx48MynCMAig6UOrlAbMUNH_DcNa3I1cBEDWfTuPX8nF1StLfpXCMhVAh21qLZ7wsWmMPP2C9tWGyYuLvkRJPeT79nNRp5t6UY7O5PbiNOBiX0QqKM7105GNE7GkTva0hjqb3"/>
+<div class="absolute top-1 right-1 bg-black/50 rounded-full p-0.5 text-white">
+<span class="material-symbols-outlined text-sm">close</span>
+</div>
+</div>
+<div class="relative flex-shrink-0 w-24 h-24 rounded-xl overflow-hidden group">
+<img class="w-full h-full object-cover" data-alt="Close up of high quality copper pipe fittings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB08z1Ycq1f3NhnqLtfdZQ7hEwvofOezFbfEo0ZTa_EA5xHphZn0lCFSpFKpEVXQWZEZlWamUWkf-SeOkrFZfinc7MZvg4sFFmwN6u697LOSj-NlPvm6tDF7U7FQzeGOKsp6-JsIt6OaeaQf3yf1lgvwzkVAKaGBMWT78gvihLmdmpOVzpo8YIzKmokHBkraA04TDsfo76xCc7LeiAVIMPWzhKhFbTzBP9kImvBiG3flGzkaFZZPheIYwe2VS0Uk9hLVFbq7d9wxtCP"/>
+<div class="absolute top-1 right-1 bg-black/50 rounded-full p-0.5 text-white">
+<span class="material-symbols-outlined text-sm">close</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Action Bar (Fixed) -->
+<div class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-background-dark/80 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800 p-4 pb-8 z-50">
+<div class="max-w-md mx-auto flex gap-4">
+<button class="flex-1 h-14 rounded-xl border border-slate-200 dark:border-slate-700 font-semibold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                Back
+            </button>
+<button class="flex-[2] h-14 bg-primary text-white rounded-xl font-bold shadow-lg shadow-primary/25 hover:brightness-110 active:scale-[0.98] transition-all">
+                Continue
+            </button>
+</div>
+</div>
+</body></html>

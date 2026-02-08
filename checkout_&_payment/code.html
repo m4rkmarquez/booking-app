@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Checkout &amp; Payment</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0f6df0",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .radio-dot {
+            --radio-dot-svg: url('data:image/svg+xml,%3csvg viewBox=%270 0 16 16%27 fill=%27rgb(15,109,240)%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3ccircle cx=%278%27 cy=%278%27 r=%273%27/%3e%3c/svg%3e');
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0d131c] dark:text-slate-50 min-h-screen flex flex-col">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-10 flex items-center bg-white dark:bg-background-dark border-b border-slate-200 dark:border-slate-800 p-4 justify-between h-14">
+<div class="flex size-10 shrink-0 items-center justify-start cursor-pointer">
+<span class="material-symbols-outlined text-2xl">arrow_back_ios</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Checkout</h2>
+<div class="size-10"></div>
+</header>
+<main class="flex-1 overflow-y-auto pb-32">
+<!-- Booking Summary Section -->
+<section>
+<h3 class="text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-6">Booking Summary</h3>
+<div class="p-4">
+<div class="flex items-stretch justify-between gap-4 rounded-xl bg-white dark:bg-slate-800/50 p-4 shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="flex flex-col gap-1 flex-[2_2_0px]">
+<p class="text-primary text-xs font-semibold uppercase tracking-wider">Oct 24, 2023 @ 2:00 PM</p>
+<p class="text-[#0d131c] dark:text-white text-lg font-bold leading-tight">Plumbing Repair</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">Sarah Jenkins (Pro)</p>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-yellow-400 text-sm fill-1">star</span>
+<span class="text-xs font-medium">4.9 (124 reviews)</span>
+</div>
+</div>
+<div class="w-24 h-24 bg-center bg-no-repeat bg-cover rounded-lg shrink-0" data-alt="Professional plumber service technician working tools" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDaahOzFerbro8NIbbuk0M46q784YangZ9J5chXX_Gnt9CHfqK_mF32_i7KBVnzHAP1xDFKcWz4Ht7rSY9trLP8kULFCuqHJyBjDZXsCRHcR_kJ2c2h-yvlYIAI9Q9mtSOu7DOY-i4qXaz_Su9eVHerLugIT5FIyDQn3trhDJY9gm42You5QxQKqnISFoWC7N4EJ_TozitkPJBt6vlmIOWB7MHm0Pj4Hex0IIqC4eC9_2Td44LsZurvuCHsZ-8qZd2W5WkbTYUFqw6t");'>
+</div>
+</div>
+</div>
+</section>
+<!-- Payment Method Section -->
+<section class="radio-dot">
+<h3 class="text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Payment Method</h3>
+<div class="flex flex-col gap-3 p-4">
+<label class="flex items-center gap-4 rounded-xl border border-solid border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/30 p-4 flex-row-reverse cursor-pointer hover:border-primary/50 transition-colors">
+<input checked="" class="h-5 w-5 border-2 border-slate-300 dark:border-slate-600 bg-transparent text-transparent checked:border-primary checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-primary" name="payment-method" type="radio"/>
+<div class="flex grow items-center gap-3">
+<div class="flex size-10 items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-700">
+<span class="material-symbols-outlined text-primary">ios</span>
+</div>
+<div class="flex flex-col">
+<p class="text-[#0d131c] dark:text-white text-sm font-medium leading-normal">Apple Pay</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-normal">Fast and secure</p>
+</div>
+</div>
+</label>
+<label class="flex items-center gap-4 rounded-xl border border-solid border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/30 p-4 flex-row-reverse cursor-pointer hover:border-primary/50 transition-colors">
+<input class="h-5 w-5 border-2 border-slate-300 dark:border-slate-600 bg-transparent text-transparent checked:border-primary checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-primary" name="payment-method" type="radio"/>
+<div class="flex grow items-center gap-3">
+<div class="flex size-10 items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-700">
+<span class="material-symbols-outlined text-primary">credit_card</span>
+</div>
+<div class="flex flex-col">
+<p class="text-[#0d131c] dark:text-white text-sm font-medium leading-normal">Visa ending in 1234</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-normal">Credit Card</p>
+</div>
+</div>
+</label>
+<label class="flex items-center gap-4 rounded-xl border border-solid border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/30 p-4 flex-row-reverse cursor-pointer hover:border-primary/50 transition-colors">
+<input class="h-5 w-5 border-2 border-slate-300 dark:border-slate-600 bg-transparent text-transparent checked:border-primary checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-primary" name="payment-method" type="radio"/>
+<div class="flex grow items-center gap-3">
+<div class="flex size-10 items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-700">
+<span class="material-symbols-outlined text-primary">account_balance_wallet</span>
+</div>
+<div class="flex flex-col">
+<p class="text-[#0d131c] dark:text-white text-sm font-medium leading-normal">PayPal</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-normal">Connected account</p>
+</div>
+</div>
+</label>
+</div>
+</section>
+<!-- Price Breakdown Section -->
+<section class="px-4 py-6">
+<h3 class="text-lg font-bold leading-tight tracking-[-0.015em] pb-4">Payment Details</h3>
+<div class="space-y-3">
+<div class="flex justify-between text-sm">
+<span class="text-slate-500 dark:text-slate-400">Plumbing Service (1 hr)</span>
+<span class="font-medium">$80.00</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-slate-500 dark:text-slate-400">Service Fee</span>
+<span class="font-medium">$5.00</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-slate-500 dark:text-slate-400">Tax</span>
+<span class="font-medium">$0.00</span>
+</div>
+<div class="pt-3 border-t border-slate-200 dark:border-slate-800 flex justify-between items-center">
+<span class="text-base font-bold">Total Price</span>
+<span class="text-xl font-bold text-primary">$85.00</span>
+</div>
+</div>
+<div class="mt-6 flex items-center justify-center gap-2 text-slate-400 text-xs">
+<span class="material-symbols-outlined text-sm">lock</span>
+<span>Secure payment encrypted with 256-bit SSL</span>
+</div>
+</section>
+</main>
+<!-- Bottom Action Area -->
+<footer class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 p-4 pb-8">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl transition-all shadow-lg active:scale-[0.98]">
+            Confirm and Pay $85.00
+        </button>
+</footer>
+</body></html>

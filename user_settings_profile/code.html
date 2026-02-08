@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>User Settings Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0f6df0",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen text-[#0d131c] dark:text-white font-display">
+<!-- Top Navigation Bar -->
+<div class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+<div class="flex items-center p-4 justify-between max-w-md mx-auto">
+<div class="text-[#0d131c] dark:text-white flex size-10 shrink-0 items-center justify-start cursor-pointer">
+<span class="material-symbols-outlined">arrow_back_ios</span>
+</div>
+<h2 class="text-[#0d131c] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10">Profile</h2>
+</div>
+</div>
+<div class="max-w-md mx-auto pb-10">
+<!-- Profile Header -->
+<div class="flex p-6 @container">
+<div class="flex w-full flex-col gap-4 items-center">
+<div class="flex gap-4 flex-col items-center">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-32 w-32 border-4 border-white dark:border-gray-700 shadow-sm" data-alt="User profile picture of a smiling person" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDG1-ecFXVuM-SgvzbhYRyNLR7s8tOTvziL_oJUkTSWpVNAG87xkppQ_npSWSlkaRDUineLYKY8qg7USPrTDd0dC1gdDs3itq_V0CLZfRJXSWdw-94r0qkyheEn4WiamVRaNXOWdTSWDsQMdX4LMNbHYUyy5YyYfqlq7sKdt7hLppJqPqOUWV0gM5VvnAmWw8icLn9HSAJwA7orwPOgxw2jelVMd1guMfPSyJMICj0gNqKg6e623aZ3odGDG7p9yNcsmx2B2m3qXCjJ");'>
+</div>
+<div class="absolute bottom-0 right-1 bg-primary text-white p-1.5 rounded-full border-2 border-white dark:border-gray-800 flex items-center justify-center cursor-pointer">
+<span class="material-symbols-outlined !text-[18px]">edit</span>
+</div>
+</div>
+<div class="flex flex-col items-center justify-center">
+<p class="text-[#0d131c] dark:text-white text-2xl font-bold leading-tight tracking-tight text-center">Alex Thompson</p>
+<p class="text-[#4b6c9b] dark:text-gray-400 text-sm font-medium leading-normal text-center mt-1">Silver Member • Since 2023</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Role Toggle / Action Panel -->
+<div class="px-4 mb-6">
+<div class="flex flex-1 flex-col items-start justify-between gap-4 rounded-xl border border-[#cfd9e8] dark:border-gray-700 bg-white dark:bg-gray-800/50 p-5 @[480px]:flex-row @[480px]:items-center shadow-sm">
+<div class="flex flex-col gap-1">
+<p class="text-[#0d131c] dark:text-white text-base font-bold leading-tight">Provider Mode</p>
+<p class="text-[#4b6c9b] dark:text-gray-400 text-sm font-normal leading-normal">Switch to offer services like driving or plumbing</p>
+</div>
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-[#e7ecf3] dark:bg-gray-700 p-0.5 transition-colors duration-200 has-[:checked]:justify-end has-[:checked]:bg-primary">
+<div class="h-full w-[27px] rounded-full bg-white shadow-md"></div>
+<input class="invisible absolute peer" type="checkbox"/>
+</label>
+</div>
+</div>
+<!-- General Settings Group -->
+<div class="mb-6">
+<h3 class="text-[#0d131c] dark:text-white text-xs font-bold uppercase tracking-widest px-6 pb-2 pt-4 opacity-60">Account Settings</h3>
+<div class="bg-white dark:bg-gray-800/30 mx-4 rounded-xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-800">
+<!-- List Item: Account Info -->
+<div class="flex items-center gap-4 px-4 min-h-[56px] justify-between cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors border-b border-gray-100 dark:border-gray-800">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-10">
+<span class="material-symbols-outlined">person</span>
+</div>
+<p class="text-[#0d131c] dark:text-white text-[15px] font-medium leading-normal flex-1 truncate">Account Info</p>
+</div>
+<div class="shrink-0 text-gray-400">
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+<!-- List Item: Payment Methods -->
+<div class="flex items-center gap-4 px-4 min-h-[56px] justify-between cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors border-b border-gray-100 dark:border-gray-800">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-10">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<p class="text-[#0d131c] dark:text-white text-[15px] font-medium leading-normal flex-1 truncate">Payment Methods</p>
+</div>
+<div class="shrink-0 text-gray-400">
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+<!-- List Item: Notifications -->
+<div class="flex items-center gap-4 px-4 min-h-[56px] justify-between cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-10">
+<span class="material-symbols-outlined">notifications</span>
+</div>
+<p class="text-[#0d131c] dark:text-white text-[15px] font-medium leading-normal flex-1 truncate">Notifications</p>
+</div>
+<div class="shrink-0 text-gray-400">
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Support Group -->
+<div class="mb-6">
+<h3 class="text-[#0d131c] dark:text-white text-xs font-bold uppercase tracking-widest px-6 pb-2 pt-4 opacity-60">Support</h3>
+<div class="bg-white dark:bg-gray-800/30 mx-4 rounded-xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-800">
+<!-- List Item: Help Center -->
+<div class="flex items-center gap-4 px-4 min-h-[56px] justify-between cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors border-b border-gray-100 dark:border-gray-800">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-10">
+<span class="material-symbols-outlined">help_center</span>
+</div>
+<p class="text-[#0d131c] dark:text-white text-[15px] font-medium leading-normal flex-1 truncate">Help Center</p>
+</div>
+<div class="shrink-0 text-gray-400">
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+<!-- List Item: Terms of Service -->
+<div class="flex items-center gap-4 px-4 min-h-[56px] justify-between cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-10">
+<span class="material-symbols-outlined">description</span>
+</div>
+<p class="text-[#0d131c] dark:text-white text-[15px] font-medium leading-normal flex-1 truncate">Terms &amp; Privacy</p>
+</div>
+<div class="shrink-0 text-gray-400">
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Logout Action -->
+<div class="px-4 mt-8">
+<div class="flex items-center gap-4 px-4 min-h-[56px] bg-red-50 dark:bg-red-900/10 border border-red-100 dark:border-red-900/30 rounded-xl justify-center cursor-pointer active:opacity-70 transition-opacity">
+<div class="text-red-600 dark:text-red-400 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">logout</span>
+</div>
+<p class="text-red-600 dark:text-red-400 text-base font-bold leading-normal">Logout</p>
+</div>
+<p class="text-center text-[#4b6c9b] dark:text-gray-500 text-[12px] font-normal leading-normal mt-6">Version 2.4.1 (Build 108)</p>
+</div>
+</div>
+</body></html>

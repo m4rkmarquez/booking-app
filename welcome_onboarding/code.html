@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Welcome Onboarding</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0f6df0",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex flex-col items-center justify-center font-display">
+<div class="relative flex h-full min-h-screen w-full max-w-[430px] flex-col bg-background-light dark:bg-background-dark overflow-x-hidden shadow-2xl mx-auto">
+<!-- Top Status Bar Spacer (iOS Style) -->
+<div class="h-12 w-full"></div>
+<!-- Header Image Section -->
+<div class="@container w-full">
+<div class="px-6 py-4">
+<div class="w-full aspect-square bg-center bg-no-repeat bg-contain flex flex-col justify-end overflow-hidden rounded-xl bg-transparent" data-alt="Friendly illustration of service professionals including nanny and plumber" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC_Ukp4KLSeLfbm7knMPgSpIvOSX0kiAnl5QL09oTibjU7WU2MCd2Yc4M5vZFwfcwtSUSlQe82-T1dflrdQxDqOdjR6zP3bt2STjWrHJ9qOF609WWGBYX6EE-8iMTK8ei4mQrIwRwS8pNYVpp4z4Qq_89dCWeIImVi8xGaycXp8irS9kkXjfSo2Puk3s89Y8gVPF45UkIbK0ODqmpqnnPFHpRCKtuKRG2c7PT9DpUNAY34k1Ytnci12Z-0sDeR1T1piy2RqYm6D4KIR");'>
+</div>
+</div>
+</div>
+<!-- Content Section -->
+<div class="flex-1 flex flex-col justify-center px-6">
+<!-- Headline Text -->
+<h1 class="text-[#0d131c] dark:text-slate-50 tracking-tight text-[32px] font-bold leading-tight text-center pb-3 pt-4">
+                Expert help, just a tap away
+            </h1>
+<!-- Body Text -->
+<p class="text-[#4e657e] dark:text-slate-400 text-base font-normal leading-relaxed pb-8 px-4 text-center">
+                Book reliable nannies, plumbers, and drivers for short-term tasks on-demand. Life simplified for you.
+            </p>
+<!-- Feature Icons (Subtle) -->
+<div class="flex justify-center gap-8 mb-8">
+<div class="flex flex-col items-center gap-2">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">child_care</span>
+</div>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">plumbing</span>
+</div>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">directions_car</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Button Group Section -->
+<div class="flex flex-col gap-3 items-stretch px-6 py-8 pb-12">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-14 px-5 bg-primary text-white text-lg font-bold leading-normal tracking-wide w-full shadow-lg shadow-primary/20 hover:brightness-110 active:scale-[0.98] transition-all">
+<span class="truncate">Get Started</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-14 px-5 bg-transparent text-[#0d131c] dark:text-slate-100 text-base font-semibold leading-normal tracking-wide w-full hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors">
+<span class="truncate">Log In</span>
+</button>
+</div>
+<!-- iOS Home Indicator Spacer -->
+<div class="h-8 w-full flex justify-center items-end pb-2">
+<div class="w-32 h-1.5 bg-slate-300 dark:bg-slate-700 rounded-full"></div>
+</div>
+</div>
+</body></html>

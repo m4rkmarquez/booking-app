@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Provider Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0f6df0",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0d131c] dark:text-slate-100">
+<!-- Top Navigation Bar -->
+<div class="fixed top-0 left-0 right-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="flex items-center p-4 justify-between max-w-md mx-auto">
+<button class="flex items-center justify-center size-10 rounded-full bg-white dark:bg-slate-800 shadow-sm">
+<span class="material-symbols-outlined text-[#0d131c] dark:text-white">arrow_back_ios_new</span>
+</button>
+<div class="flex gap-2">
+<button class="flex items-center justify-center size-10 rounded-full bg-white dark:bg-slate-800 shadow-sm text-[#0d131c] dark:text-white">
+<span class="material-symbols-outlined">share</span>
+</button>
+<button class="flex items-center justify-center size-10 rounded-full bg-white dark:bg-slate-800 shadow-sm text-[#0d131c] dark:text-white">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Main Content Container -->
+<main class="max-w-md mx-auto pb-32">
+<!-- Profile Header -->
+<div class="flex p-4 pt-20 @container">
+<div class="flex w-full flex-col gap-4 items-center">
+<div class="flex gap-4 flex-col items-center">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-32 w-32 border-4 border-white dark:border-slate-800 shadow-lg" data-alt="Professional headshot of a smiling male service provider" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAJsUBGnfDGARoxVM_ki0WKt9l0InWFia98PZvfTUG-rpDLghZSRR3W7XqZlLNaEUPGzFPiydPF3aX5f8KBbdxHwc0maATymBQlotd1JRpE7wuJDMYB9m2B60Dd3ESgQXm_23K_5hVcvnu7UuRx4LTJYGIZB5GQ_kVRAASNv3wsZwiuVd80M7Iyo8kNDETWTi02Du52GLwjIQ-XjRwXrPQfT8X0_bCXrW-KtammMZOUxvZxK9PC682q48Y_HDSiO6gJ-wINsz1aoviS");'>
+</div>
+<div class="absolute bottom-1 right-1 bg-primary text-white p-1 rounded-full border-2 border-white dark:border-slate-800">
+<span class="material-symbols-outlined text-[18px] block">verified</span>
+</div>
+</div>
+<div class="flex flex-col items-center justify-center">
+<p class="text-[#0d131c] dark:text-white text-[24px] font-bold leading-tight tracking-[-0.015em] text-center flex items-center gap-1">
+                            Alex Johnson
+                        </p>
+<p class="text-primary font-semibold text-base leading-normal text-center">Master Plumber • Expert</p>
+<div class="flex items-center gap-1 mt-1 text-[#4b6c9b] dark:text-slate-400">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<p class="text-sm font-normal">Typically responds in 10 mins</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Stats Section -->
+<div class="flex flex-wrap gap-4 p-4">
+<div class="flex min-w-[100px] flex-1 flex-col gap-1 rounded-xl p-4 bg-white dark:bg-slate-800 border border-[#cfd9e8] dark:border-slate-700 shadow-sm">
+<p class="text-[#4b6c9b] dark:text-slate-400 text-xs font-medium uppercase tracking-wider">Jobs</p>
+<p class="text-[#0d131c] dark:text-white tracking-light text-xl font-bold leading-tight">150+</p>
+</div>
+<div class="flex min-w-[100px] flex-1 flex-col gap-1 rounded-xl p-4 bg-white dark:bg-slate-800 border border-[#cfd9e8] dark:border-slate-700 shadow-sm">
+<p class="text-[#4b6c9b] dark:text-slate-400 text-xs font-medium uppercase tracking-wider">Rating</p>
+<div class="flex items-center gap-1">
+<p class="text-[#0d131c] dark:text-white tracking-light text-xl font-bold leading-tight">4.9</p>
+<span class="material-symbols-outlined text-yellow-500 text-[20px] fill-current">star</span>
+</div>
+</div>
+<div class="flex min-w-[100px] flex-1 flex-col gap-1 rounded-xl p-4 bg-white dark:bg-slate-800 border border-[#cfd9e8] dark:border-slate-700 shadow-sm">
+<p class="text-[#4b6c9b] dark:text-slate-400 text-xs font-medium uppercase tracking-wider">Experience</p>
+<p class="text-[#0d131c] dark:text-white tracking-light text-xl font-bold leading-tight">10 yrs</p>
+</div>
+</div>
+<!-- Section: About -->
+<h3 class="text-[#0d131c] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">About Alex</h3>
+<p class="text-[#4b6c9b] dark:text-slate-300 text-base font-normal leading-relaxed pb-3 pt-1 px-4">
+            Professional service provider with over 10 years of experience in high-quality home maintenance and repairs. Dedicated to punctuality and customer satisfaction. Specializing in emergency leak repair, boiler maintenance, and complete bathroom installations.
+        </p>
+<!-- Section: Services Tags -->
+<div class="flex flex-wrap gap-2 px-4 py-2">
+<span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">Pipe Repair</span>
+<span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">Drain Cleaning</span>
+<span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">Boiler Service</span>
+<span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">Fixture Install</span>
+</div>
+<!-- Section: Reviews -->
+<div class="flex items-center justify-between px-4 pb-2 pt-6">
+<h3 class="text-[#0d131c] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Reviews (48)</h3>
+<button class="text-primary text-sm font-bold">See All</button>
+</div>
+<div class="flex flex-col gap-4 px-4 pb-8">
+<!-- Review Card 1 -->
+<div class="p-4 bg-white dark:bg-slate-800 rounded-xl border border-[#cfd9e8] dark:border-slate-700 shadow-sm">
+<div class="flex justify-between items-start mb-2">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-slate-200" data-alt="User avatar placeholder" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuByIBnIEkGmCLyPcCrfFvh_FPLnLWjdsHyPJqzHGl0_FPjeyYTEabcsQUXri6ze6Zkgne-iAdrxQPrYyjFZP6PNU40MU17FB2koGtL-JuV0fnxx00CQ_n3IQQGl65cEolhrRa-8CCv_USWLKQQwEji_Jqd5bNL3bk6btb7ntWX1kQ3d8SDZLyAOWCW2or7XC8piIZNDSBB3eyPrvS-IPcvW_ANKGz9wRTQwxVU8w33GSHyCQRt7u2peq7rFQ-kNje5mH8DoeXl_pGjt'); background-size: cover;"></div>
+<div>
+<p class="text-sm font-bold text-[#0d131c] dark:text-white">Sarah Miller</p>
+<p class="text-xs text-[#4b6c9b] dark:text-slate-400">2 days ago</p>
+</div>
+</div>
+<div class="flex text-yellow-500">
+<span class="material-symbols-outlined text-[16px] fill-current">star</span>
+<span class="material-symbols-outlined text-[16px] fill-current">star</span>
+<span class="material-symbols-outlined text-[16px] fill-current">star</span>
+<span class="material-symbols-outlined text-[16px] fill-current">star</span>
+<span class="material-symbols-outlined text-[16px] fill-current">star</span>
+</div>
+</div>
+<p class="text-sm text-[#4b6c9b] dark:text-slate-300 leading-relaxed">
+                    Alex was incredibly professional. He arrived right on time and fixed our kitchen leak in less than 30 minutes. Highly recommended!
+                </p>
+</div>
+<!-- Review Card 2 -->
+<div class="p-4 bg-white dark:bg-slate-800 rounded-xl border border-[#cfd9e8] dark:border-slate-700 shadow-sm">
+<div class="flex justify-between items-start mb-2">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-slate-200" data-alt="User avatar placeholder" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAO1TPtqCAUz-UfUyrp5EvUMn66W07C1pMGY5rTzq-6slSv4bLF7bIDX9QC5eA-ZemHUJ5jridzrQrTZbQB8NM95F8yHXBeL4RnaTUm3rMzVkqS-NlJJgEqlFl4iFYM_AWO2aaEcpLN_Zcs9OdMlk5Z6llO2nvWEGaPHp3s2zxYtGBL45BtV0BjYo9Z9thznJOO6tHVwQmGKMnwaQfmnzSxluKjIdlz5YTNlGPuoW0JKXEAhGgbL9A5iAYzur-Nk4OnLX8HXA0RS6RE'); background-size: cover;"></div>
+<div>
+<p class="text-sm font-bold text-[#0d131c] dark:text-white">David Chen</p>
+<p class="text-xs text-[#4b6c9b] dark:text-slate-400">1 week ago</p>
+</div>
+</div>
+<div class="flex text-yellow-500">
+<span class="material-symbols-outlined text-[16px] fill-current">star</span>
+<span class="material-symbols-outlined text-[16px] fill-current">star</span>
+<span class="material-symbols-outlined text-[16px] fill-current">star</span>
+<span class="material-symbols-outlined text-[16px] fill-current">star</span>
+<span class="material-symbols-outlined text-[16px] fill-current">star_half</span>
+</div>
+</div>
+<p class="text-sm text-[#4b6c9b] dark:text-slate-300 leading-relaxed">
+                    Great service and very knowledgeable. He explained everything he was doing and gave some great maintenance tips.
+                </p>
+</div>
+</div>
+</main>
+<!-- Sticky Bottom Action Bar -->
+<div class="fixed bottom-0 left-0 right-0 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-4 pt-4 pb-8 z-50">
+<div class="max-w-md mx-auto flex items-center justify-between gap-4">
+<div class="flex flex-col">
+<p class="text-xs text-[#4b6c9b] dark:text-slate-400 font-medium">Estimated Rate</p>
+<p class="text-xl font-bold text-[#0d131c] dark:text-white">$65<span class="text-sm font-normal text-[#4b6c9b]">/hr</span></p>
+</div>
+<button class="flex-1 bg-primary text-white text-base font-bold py-4 px-6 rounded-xl shadow-lg shadow-primary/20 active:scale-95 transition-transform flex items-center justify-center gap-2">
+                Book Now
+                <span class="material-symbols-outlined text-[20px]">calendar_today</span>
+</button>
+</div>
+</div>
+</body></html>

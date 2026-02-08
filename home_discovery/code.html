@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Home Discovery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0f6df0",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0d131c] dark:text-slate-100 min-h-screen pb-24">
+<!-- Top App Bar -->
+<div class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-4 py-4 flex items-center justify-between border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/20" data-alt="User profile picture of a young man" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAzna1IanEatizt_dF9Wmi-s4wORWQZk7ABI1jzrkyXBNhZw8Bm6FNefNi3BuHD3FpNrxDy-PWwGblsm5H18O57ZUJvj_5Uy6wId9ub3OgjHUCgSDBI_N0gVl2JDCS4DCaCINBYl3itotWeLDSU2LPHgOPKdXZMruMCYOg7LsUdgKTyZ18V-GSvrpCfNRuTfCDYdRSZgHXJ_oWf3qU04Gd87smm6oYpj-kcRGqcx2Si_97e7VDX6D630I_bvCGbcKLEIOQdqMUrsUIw");'>
+</div>
+<div>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Welcome back,</p>
+<h2 class="text-lg font-bold leading-tight tracking-tight">Alex Harrison</h2>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex size-10 items-center justify-center rounded-full bg-white dark:bg-slate-800 shadow-sm border border-slate-200 dark:border-slate-700">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-300">notifications</span>
+</button>
+</div>
+</div>
+<!-- Search Bar Section -->
+<div class="px-4 py-4">
+<label class="flex flex-col w-full">
+<div class="flex w-full h-12 items-stretch rounded-xl shadow-sm overflow-hidden border border-slate-200 dark:border-slate-700">
+<div class="text-[#4b6c9b] flex bg-white dark:bg-slate-800 items-center justify-center pl-4">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-white dark:bg-slate-800 text-[#0d131c] dark:text-white focus:ring-0 placeholder:text-slate-400 text-base font-normal px-3" placeholder="Find nannies, plumbers, cleaners..."/>
+<div class="flex items-center bg-white dark:bg-slate-800 pr-2">
+<button class="p-2 bg-primary/10 rounded-lg text-primary">
+<span class="material-symbols-outlined text-sm">tune</span>
+</button>
+</div>
+</div>
+</label>
+</div>
+<!-- Categories Section -->
+<div class="px-4 py-2 flex items-center justify-between">
+<h3 class="text-lg font-bold tracking-tight">Services</h3>
+<button class="text-primary text-sm font-semibold">See All</button>
+</div>
+<div class="grid grid-cols-3 gap-3 p-4">
+<div class="flex flex-col gap-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800 p-4 items-center justify-center text-center shadow-sm">
+<div class="text-primary bg-primary/10 p-2 rounded-full mb-1">
+<span class="material-symbols-outlined">child_care</span>
+</div>
+<h2 class="text-xs font-bold">Nanny</h2>
+</div>
+<div class="flex flex-col gap-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800 p-4 items-center justify-center text-center shadow-sm">
+<div class="text-[#eab308] bg-yellow-500/10 p-2 rounded-full mb-1">
+<span class="material-symbols-outlined">plumbing</span>
+</div>
+<h2 class="text-xs font-bold">Plumber</h2>
+</div>
+<div class="flex flex-col gap-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800 p-4 items-center justify-center text-center shadow-sm">
+<div class="text-[#ef4444] bg-red-500/10 p-2 rounded-full mb-1">
+<span class="material-symbols-outlined">directions_car</span>
+</div>
+<h2 class="text-xs font-bold">Driver</h2>
+</div>
+<div class="flex flex-col gap-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800 p-4 items-center justify-center text-center shadow-sm">
+<div class="text-[#22c55e] bg-green-500/10 p-2 rounded-full mb-1">
+<span class="material-symbols-outlined">bolt</span>
+</div>
+<h2 class="text-xs font-bold">Electrician</h2>
+</div>
+<div class="flex flex-col gap-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800 p-4 items-center justify-center text-center shadow-sm">
+<div class="text-[#8b5cf6] bg-purple-500/10 p-2 rounded-full mb-1">
+<span class="material-symbols-outlined">school</span>
+</div>
+<h2 class="text-xs font-bold">Tutor</h2>
+</div>
+<div class="flex flex-col gap-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800 p-4 items-center justify-center text-center shadow-sm">
+<div class="text-[#06b6d4] bg-cyan-500/10 p-2 rounded-full mb-1">
+<span class="material-symbols-outlined">cleaning_services</span>
+</div>
+<h2 class="text-xs font-bold">Cleaner</h2>
+</div>
+</div>
+<!-- Promo Card -->
+<div class="px-4 py-2">
+<div class="w-full bg-primary rounded-xl p-4 flex items-center justify-between text-white overflow-hidden relative">
+<div class="z-10 relative">
+<h4 class="text-lg font-bold">Get 20% Off</h4>
+<p class="text-sm opacity-90">On your first booking this month</p>
+<button class="mt-3 bg-white text-primary px-4 py-1.5 rounded-lg text-sm font-bold">Claim Now</button>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-20">
+<span class="material-symbols-outlined text-[100px]">loyalty</span>
+</div>
+</div>
+</div>
+<!-- Featured Professionals -->
+<div class="px-4 py-4 flex items-center justify-between mt-2">
+<h3 class="text-lg font-bold tracking-tight">Featured Professionals</h3>
+<button class="text-primary text-sm font-semibold">View all</button>
+</div>
+<div class="flex overflow-x-auto gap-4 px-4 pb-6 no-scrollbar">
+<!-- Pro Card 1 -->
+<div class="min-w-[220px] bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 shadow-sm flex-shrink-0">
+<div class="relative w-full aspect-[4/3] rounded-lg bg-cover bg-center mb-3" data-alt="Professional plumber working on pipes" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDp1A5uzgMaWvXtirEl3dSHGtEgCzyIRiPue9JZj3eSwn9G1mTkheVpNLpGpNqvscfyAnIFQBPRWVJfDCNyKZKN7tR6bfJTLClFy42CowEFoSUS8-mgLEe58tQoe2_hxI-pxPhZM2S9c4EGE8O-7cTfJMTPm5sR2EY-XHFkhaY5Ga7OpxLn6Sm0IutXViWmikVepJcnb7jEWKK2XAXr_xwz_NXyAu60mMWWRGwFoJWYH0yqouilTR4THAndQG8HOQJxAqf3iugVuYcM");'>
+<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-lg flex items-center gap-1">
+<span class="material-symbols-outlined text-yellow-500 text-xs fill-1">star</span>
+<span class="text-[10px] font-bold text-slate-800">4.9</span>
+</div>
+</div>
+<h4 class="font-bold text-sm">Marcus Chen</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 mb-2">Master Plumber</p>
+<div class="flex items-center justify-between">
+<span class="text-sm font-bold text-primary">$45/hr</span>
+<button class="bg-primary text-white text-[10px] font-bold px-3 py-1.5 rounded-lg">Book Now</button>
+</div>
+</div>
+<!-- Pro Card 2 -->
+<div class="min-w-[220px] bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 shadow-sm flex-shrink-0">
+<div class="relative w-full aspect-[4/3] rounded-lg bg-cover bg-center mb-3" data-alt="Professional nanny playing with a toddler" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBWnDef6lRUcuzwOQ2Pb92Y5NPqzcT8nJRvjf3hRKOhIr1RAkdMN0tIUQv9_s80k2gqispTND54vCWzfx86YK22a_Fbje6-buYf55rUu824X3acbZU7h_4NT1Zrk0GUuPCFKo5ZaLkFZ6XAd6VgobDsCBHq-Ag5QtLgrB7B_VNBfZT2Vy4bwWCKxtvd8WscSyowP0W18GGVmDwFZJjUfHtI6aZACWpWgmFwFwy00nn5_ZlwI0YKlcdN8lflAwNagy5W-D-YavztSgQj");'>
+<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-lg flex items-center gap-1">
+<span class="material-symbols-outlined text-yellow-500 text-xs fill-1">star</span>
+<span class="text-[10px] font-bold text-slate-800">5.0</span>
+</div>
+</div>
+<h4 class="font-bold text-sm">Sarah Jenkins</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 mb-2">Senior Nanny</p>
+<div class="flex items-center justify-between">
+<span class="text-sm font-bold text-primary">$32/hr</span>
+<button class="bg-primary text-white text-[10px] font-bold px-3 py-1.5 rounded-lg">Book Now</button>
+</div>
+</div>
+<!-- Pro Card 3 -->
+<div class="min-w-[220px] bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3 shadow-sm flex-shrink-0">
+<div class="relative w-full aspect-[4/3] rounded-lg bg-cover bg-center mb-3" data-alt="Modern house cleaner with supplies" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBDB8Qtm4oSkRxcC_0bIfdXU2w_5jpFLTqC4cRpbTkpoJV81uh999GNan3MSuoCz3MDQq0rnbu0HEYZGWFAsZEf8Hvv9m7mrUsHs-UGzF9AoGJh-MTSpdMPWiTioFPEOy9QSHK4pYhOYIW-fdTnz_idOJlGpyvj1XJOh8ALFZqU4F9la3pIsydghCI7erC-GqzI1KBfKG39FBSTRK3u4-UKitJYzSLHzu-5mlU7t8M7tDJTeAe9170Ec1qRvFk_qK8AoyCBF9oBbPly");'>
+<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-lg flex items-center gap-1">
+<span class="material-symbols-outlined text-yellow-500 text-xs fill-1">star</span>
+<span class="text-[10px] font-bold text-slate-800">4.8</span>
+</div>
+</div>
+<h4 class="font-bold text-sm">Elena Rodriguez</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 mb-2">Deep Cleaning Expert</p>
+<div class="flex items-center justify-between">
+<span class="text-sm font-bold text-primary">$28/hr</span>
+<button class="bg-primary text-white text-[10px] font-bold px-3 py-1.5 rounded-lg">Book Now</button>
+</div>
+</div>
+</div>
+<!-- Bottom Tab Bar (iOS style) -->
+<div class="fixed bottom-0 left-0 right-0 bg-white/90 dark:bg-slate-900/90 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800 px-6 py-4 flex items-center justify-between z-50">
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined fill-1">home</span>
+<span class="text-[10px] font-bold">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500">
+<span class="material-symbols-outlined">event_note</span>
+<span class="text-[10px] font-medium">Bookings</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="text-[10px] font-medium">Messages</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</button>
+</div>
+</body></html>

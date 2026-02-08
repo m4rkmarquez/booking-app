@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Service Category List - Nannies</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0f6df0",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-[#0d131c] dark:text-white transition-colors duration-200">
+<div class="relative flex min-h-screen w-full flex-col max-w-[430px] mx-auto bg-background-light dark:bg-background-dark overflow-x-hidden shadow-2xl">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-20 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+<div class="flex items-center p-4 justify-between">
+<div class="text-[#0d131c] dark:text-white flex size-10 shrink-0 items-center justify-center cursor-pointer">
+<span class="material-symbols-outlined">arrow_back_ios</span>
+</div>
+<h2 class="text-[#0d131c] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Nannies</h2>
+<div class="flex w-10 items-center justify-end">
+<button class="flex cursor-pointer items-center justify-center rounded-lg h-10 bg-transparent text-[#0d131c] dark:text-white">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+</div>
+<!-- Chips / Filters -->
+<div class="flex gap-3 p-4 pt-0 overflow-x-auto no-scrollbar">
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 px-4 shadow-sm">
+<span class="text-[#0d131c] dark:text-white text-sm font-medium">Sort: Top Rated</span>
+<span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 px-4 shadow-sm">
+<span class="text-[#0d131c] dark:text-white text-sm font-medium">Price</span>
+<span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 px-4 shadow-sm">
+<span class="text-[#0d131c] dark:text-white text-sm font-medium">Availability</span>
+<span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+</button>
+</div>
+</header>
+<main class="flex-1">
+<!-- Professional Card 1 -->
+<div class="p-4 pt-4">
+<div class="flex flex-col gap-3 rounded-xl bg-white dark:bg-gray-800 p-4 shadow-sm border border-gray-100 dark:border-gray-700">
+<div class="flex items-start justify-between gap-4">
+<div class="flex flex-[2_2_0px] flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="text-green-600 dark:text-green-400 text-xs font-semibold uppercase tracking-wider">Available Today</span>
+</div>
+<div class="flex items-center gap-1">
+<p class="text-[#0d131c] dark:text-white text-lg font-bold">Sarah Jenkins</p>
+<span class="material-symbols-outlined text-primary text-base fill-icon">verified</span>
+</div>
+<div class="flex items-center gap-1 text-[#4b6c9b] dark:text-gray-400 text-sm">
+<span class="material-symbols-outlined text-yellow-500 text-sm fill-icon">star</span>
+<span class="font-semibold text-[#0d131c] dark:text-white">4.8</span>
+<span>(124 reviews)</span>
+</div>
+</div>
+<div class="size-20 bg-center bg-no-repeat bg-cover rounded-xl" data-alt="Professional nanny portrait smiling friendly" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDuuSjh6qbRUciUNK5DF5geqxN65Ec9o8vPd6D97V5EzoXq_19lEvPuuYWPZQH9lQGFhGJn4F7Nf53D4aY6KBBPSHbIzhe7p7wNxq5rNoELP0P5S5fmjet00fDeJdgDrq-pVHBFhtfOC4UGbEtk4nC-P45V1lBl-2eS22pfscs7kWF-1SZx71TAlaa4nLVpxVW1jTtwNEt2z_nccyplkXjpFwAUsm_T1srgn5CFPAmoNz6yM3iSF3SU8nzYzXsSIK02ttgRTcvDBEf1");'></div>
+</div>
+<p class="text-gray-600 dark:text-gray-300 text-sm font-normal leading-relaxed line-clamp-2">
+                        Certified early childhood educator with 7+ years of experience. CPR/First-Aid certified and specializing in infant care and toddler development.
+                    </p>
+<div class="flex items-center justify-between mt-1 pt-3 border-t border-gray-50 dark:border-gray-700">
+<div class="flex flex-col">
+<span class="text-xs text-gray-500 uppercase font-bold">Hourly Rate</span>
+<span class="text-lg font-bold text-primary">$28/hr</span>
+</div>
+<button class="flex h-10 px-6 items-center justify-center rounded-lg bg-primary text-white text-sm font-bold transition-transform active:scale-95">
+                            View Profile
+                        </button>
+</div>
+</div>
+</div>
+<!-- Professional Card 2 -->
+<div class="px-4 pb-4">
+<div class="flex flex-col gap-3 rounded-xl bg-white dark:bg-gray-800 p-4 shadow-sm border border-gray-100 dark:border-gray-700">
+<div class="flex items-start justify-between gap-4">
+<div class="flex flex-[2_2_0px] flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="text-blue-600 dark:text-blue-400 text-xs font-semibold uppercase tracking-wider">Responds in 5m</span>
+</div>
+<div class="flex items-center gap-1">
+<p class="text-[#0d131c] dark:text-white text-lg font-bold">Emily Rodriguez</p>
+</div>
+<div class="flex items-center gap-1 text-[#4b6c9b] dark:text-gray-400 text-sm">
+<span class="material-symbols-outlined text-yellow-500 text-sm fill-icon">star</span>
+<span class="font-semibold text-[#0d131c] dark:text-white">4.9</span>
+<span>(85 reviews)</span>
+</div>
+</div>
+<div class="size-20 bg-center bg-no-repeat bg-cover rounded-xl" data-alt="Woman with glasses professional nanny headshot" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCPp9hkIQFa6e5PSn8ujMqBJvH_Wzhj0Hj7GBljp9tu3AAFlZth1-J6AwCXcVjKLbevcN6Hw2vmcGIJp30B0Z1QR5ILyEs1v90eh7rgfrtiRNOs_-NWkJWEgRNZX92JRawqItstDvgNLxC-k0sXWQM_5YTFJXZmf5fLBo6xaKBy2c8h5qq51vd3RBb4ejBdRYC5i30dXzWaY6L9UTTs-1qIy8oxKs06hA4HwlUtLtzhZ25opGBlairShPemmUoowLUCxeIRlGVz-QCw");'></div>
+</div>
+<p class="text-gray-600 dark:text-gray-300 text-sm font-normal leading-relaxed line-clamp-2">
+                        Energetic and creative nanny with a background in arts and crafts. I love organizing outdoor activities and educational games for school-age children.
+                    </p>
+<div class="flex items-center justify-between mt-1 pt-3 border-t border-gray-50 dark:border-gray-700">
+<div class="flex flex-col">
+<span class="text-xs text-gray-500 uppercase font-bold">Hourly Rate</span>
+<span class="text-lg font-bold text-primary">$22/hr</span>
+</div>
+<button class="flex h-10 px-6 items-center justify-center rounded-lg bg-primary text-white text-sm font-bold transition-transform active:scale-95">
+                            View Profile
+                        </button>
+</div>
+</div>
+</div>
+<!-- Professional Card 3 -->
+<div class="px-4 pb-4">
+<div class="flex flex-col gap-3 rounded-xl bg-white dark:bg-gray-800 p-4 shadow-sm border border-gray-100 dark:border-gray-700">
+<div class="flex items-start justify-between gap-4">
+<div class="flex flex-[2_2_0px] flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="text-gray-500 dark:text-gray-400 text-xs font-semibold uppercase tracking-wider">Available Tomorrow</span>
+</div>
+<div class="flex items-center gap-1">
+<p class="text-[#0d131c] dark:text-white text-lg font-bold">Michael Chen</p>
+</div>
+<div class="flex items-center gap-1 text-[#4b6c9b] dark:text-gray-400 text-sm">
+<span class="material-symbols-outlined text-yellow-500 text-sm fill-icon">star</span>
+<span class="font-semibold text-[#0d131c] dark:text-white">4.7</span>
+<span>(52 reviews)</span>
+</div>
+</div>
+<div class="size-20 bg-center bg-no-repeat bg-cover rounded-xl" data-alt="Male professional nanny smiling" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCoZOKBw1ro6gLWqugCS_q_rMbZQJ479Vb7Y3F0wrtJkU-3fpdPmdkFKQwHJ4uquGU71O3QCm0scnuKRZuacipLRado6CR1C57NVuItVD_6qjJaIuDBzFREHeGEC1fA3sBF56BP7fUSXjQSJ9R-mRZa6IV5rZtjJWWNruEnAIJp47nmLB0f2wP59hA4lKKAAGZeuhuRlEWaKnJ6GZ6LO7OiqqcXDtb7c6nh4zweQd5XpD_VLa6FVNpLcdakJM7xsVOHRERJvyzioSTy");'></div>
+</div>
+<p class="text-gray-600 dark:text-gray-300 text-sm font-normal leading-relaxed line-clamp-2">
+                        Former camp counselor with extensive experience managing multiple children. Focuses on safe, active play and help with homework/tutoring.
+                    </p>
+<div class="flex items-center justify-between mt-1 pt-3 border-t border-gray-50 dark:border-gray-700">
+<div class="flex flex-col">
+<span class="text-xs text-gray-500 uppercase font-bold">Hourly Rate</span>
+<span class="text-lg font-bold text-primary">$25/hr</span>
+</div>
+<button class="flex h-10 px-6 items-center justify-center rounded-lg bg-primary text-white text-sm font-bold transition-transform active:scale-95">
+                            View Profile
+                        </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Map Toggle -->
+<div class="fixed bottom-6 left-1/2 -translate-x-1/2 z-30">
+<button class="flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-primary rounded-full text-white shadow-xl hover:bg-black transition-colors font-medium">
+<span class="material-symbols-outlined">map</span>
+<span>Map view</span>
+</button>
+</div>
+<!-- Bottom Tab Bar Placeholder (iOS Style) -->
+<footer class="h-20 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-t border-gray-200 dark:border-gray-800 flex justify-around items-center px-4 pb-2">
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined fill-icon">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-gray-400">
+<span class="material-symbols-outlined">calendar_month</span>
+<span class="text-[10px] font-medium">Bookings</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-gray-400">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="text-[10px] font-medium">Messages</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-gray-400">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</div>
+</footer>
+</div>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</body></html>

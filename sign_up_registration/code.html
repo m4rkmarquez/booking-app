@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sign Up - Service Booking</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0f6df0",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0d131c] dark:text-slate-100 transition-colors">
+<div class="relative flex h-auto min-h-screen w-full flex-col max-w-[480px] mx-auto overflow-x-hidden">
+<!-- Top App Bar -->
+<div class="flex items-center p-4 pb-2 justify-between bg-transparent">
+<div class="text-[#0d131c] dark:text-slate-100 flex size-12 shrink-0 items-center cursor-pointer">
+<span class="material-symbols-outlined">arrow_back_ios</span>
+</div>
+<h2 class="text-[#0d131c] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12">Sign Up</h2>
+</div>
+<!-- Headline -->
+<div class="px-4 pt-6">
+<h1 class="text-[#0d131c] dark:text-white tracking-tight text-[32px] font-bold leading-tight text-left">Join our community</h1>
+<p class="text-[#4b6c9b] dark:text-slate-400 text-base font-normal mt-2">Get started with on-demand services today.</p>
+</div>
+<!-- Role Selector (Segmented Button) -->
+<div class="px-4 py-6">
+<div class="flex h-12 w-full items-center justify-center rounded-xl bg-slate-200 dark:bg-slate-800 p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-slate-700 has-[:checked]:shadow-sm has-[:checked]:text-[#0d131c] dark:has-[:checked]:text-white text-[#4b6c9b] dark:text-slate-400 text-sm font-semibold transition-all">
+<span class="truncate">I want to hire</span>
+<input checked="" class="invisible w-0" name="user_role" type="radio" value="hire"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-slate-700 has-[:checked]:shadow-sm has-[:checked]:text-[#0d131c] dark:has-[:checked]:text-white text-[#4b6c9b] dark:text-slate-400 text-sm font-semibold transition-all">
+<span class="truncate">I want to work</span>
+<input class="invisible w-0" name="user_role" type="radio" value="work"/>
+</label>
+</div>
+</div>
+<!-- Form Fields -->
+<div class="flex flex-col gap-1 px-4">
+<!-- Full Name -->
+<div class="py-2">
+<label class="flex flex-col flex-1">
+<p class="text-[#0d131c] dark:text-slate-200 text-sm font-semibold leading-normal pb-1.5">Full Name</p>
+<input class="form-input flex w-full rounded-xl text-[#0d131c] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#cfd9e8] dark:border-slate-700 bg-white dark:bg-slate-900 h-14 placeholder:text-[#4b6c9b]/60 p-[15px] text-base font-normal" placeholder="Jane Doe" type="text"/>
+</label>
+</div>
+<!-- Email Address -->
+<div class="py-2">
+<label class="flex flex-col flex-1">
+<p class="text-[#0d131c] dark:text-slate-200 text-sm font-semibold leading-normal pb-1.5">Email Address</p>
+<input class="form-input flex w-full rounded-xl text-[#0d131c] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#cfd9e8] dark:border-slate-700 bg-white dark:bg-slate-900 h-14 placeholder:text-[#4b6c9b]/60 p-[15px] text-base font-normal" placeholder="jane@example.com" type="email"/>
+</label>
+</div>
+<!-- Phone Number -->
+<div class="py-2">
+<label class="flex flex-col flex-1">
+<p class="text-[#0d131c] dark:text-slate-200 text-sm font-semibold leading-normal pb-1.5">Phone Number</p>
+<div class="relative flex items-center">
+<span class="absolute left-4 text-[#4b6c9b] font-medium">+1</span>
+<input class="form-input flex w-full rounded-xl text-[#0d131c] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#cfd9e8] dark:border-slate-700 bg-white dark:bg-slate-900 h-14 placeholder:text-[#4b6c9b]/60 pl-12 pr-4 py-4 text-base font-normal" placeholder="(555) 000-0000" type="tel"/>
+</div>
+</label>
+</div>
+<!-- Password -->
+<div class="py-2">
+<label class="flex flex-col flex-1">
+<p class="text-[#0d131c] dark:text-slate-200 text-sm font-semibold leading-normal pb-1.5">Password</p>
+<div class="relative flex items-center">
+<input class="form-input flex w-full rounded-xl text-[#0d131c] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#cfd9e8] dark:border-slate-700 bg-white dark:bg-slate-900 h-14 placeholder:text-[#4b6c9b]/60 p-[15px] text-base font-normal" placeholder="••••••••" type="password"/>
+<span class="material-symbols-outlined absolute right-4 text-[#4b6c9b] cursor-pointer">visibility</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Primary Button -->
+<div class="px-4 pt-6 pb-4">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold h-14 rounded-xl shadow-md transition-colors text-lg">
+                Create Account
+            </button>
+</div>
+<!-- Divider -->
+<div class="flex items-center px-4 py-4 gap-4">
+<div class="h-px bg-[#cfd9e8] dark:bg-slate-700 flex-1"></div>
+<p class="text-[#4b6c9b] text-sm font-medium">or</p>
+<div class="h-px bg-[#cfd9e8] dark:bg-slate-700 flex-1"></div>
+</div>
+<!-- Social Logins -->
+<div class="flex flex-col gap-3 px-4 pb-8">
+<button class="flex items-center justify-center gap-3 w-full bg-white dark:bg-slate-900 border border-[#cfd9e8] dark:border-slate-700 h-14 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<svg class="w-5 h-5" viewbox="0 0 24 24">
+<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"></path>
+<path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path>
+</svg>
+<span class="text-[#0d131c] dark:text-white font-semibold">Continue with Google</span>
+</button>
+<button class="flex items-center justify-center gap-3 w-full bg-black text-white h-14 rounded-xl hover:bg-zinc-900 transition-colors">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24">
+<path d="M17.05 20.28c-.98.95-2.05 1.78-3.19 1.76-1.14-.02-1.5-.72-2.81-.72-1.31 0-1.72.7-2.81.74-1.12.04-2.31-.92-3.32-1.93-2.07-2.07-3.66-5.83-1.55-9.48 1.05-1.8 2.89-2.95 4.88-2.98 1.51-.03 2.94 1.01 3.86 1.01.91 0 2.65-1.25 4.45-1.07.75.03 2.87.3 4.23 2.3-.11.07-2.52 1.47-2.5 4.39.03 3.49 3.03 4.65 3.07 4.67-.02.05-.48 1.65-1.6 3.31zM14.28 4.38c.81-1.02 1.34-2.45 1.19-3.88-1.23.05-2.73.82-3.61 1.85-.79.91-1.48 2.37-1.29 3.78 1.37.1 2.8-.73 3.71-1.75z"></path>
+</svg>
+<span class="font-semibold">Continue with Apple</span>
+</button>
+</div>
+<!-- Terms and Conditions -->
+<div class="px-4 text-center">
+<p class="text-[#4b6c9b] dark:text-slate-500 text-xs leading-relaxed">
+                By signing up, you agree to our <span class="text-primary font-medium underline">Terms of Service</span> and <span class="text-primary font-medium underline">Privacy Policy</span>.
+            </p>
+</div>
+<!-- Footer -->
+<div class="px-4 py-8 text-center">
+<p class="text-[#0d131c] dark:text-slate-300 text-sm font-medium">
+                Already have an account? <span class="text-primary font-bold cursor-pointer hover:underline">Log In</span>
+</p>
+</div>
+<div class="h-8"></div>
+</div>
+</body></html>
